@@ -160,7 +160,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0px;
-  background-image: url(../../images/hero-btmbg.png);
+  background-image: url(../images/hero-btmbg.png);
   background-repeat: no-repeat;
   background-size: 358px 100px;
   background-position: right bottom;
@@ -394,7 +394,7 @@ body {
 }
 .deliver-section {
   padding: 140px 0;
-  background-image: url(../../images/deliver-top-bg.png), url(../../images/deliver-btm-img.png);
+  background-image: url(../images/deliver-top-bg.png), url(../images/deliver-btm-img.png);
   background-repeat: no-repeat;
   background-size: 147px 100px, 200px 100px;
   background-position: top left, right bottom;
@@ -507,7 +507,6 @@ body {
   background-repeat: no-repeat;
   background-size: 200px 122px;
   background-position: left bottom;
-  z-index: 444;
 }
 
 .ready {

@@ -9,7 +9,7 @@
 .hero {
     padding-bottom: 250px;
     @include display($items:center, $space:space-between, $gap:0px);
-    background-image: url(../../images/hero-btmbg.png);
+    background-image: url(../images/hero-btmbg.png);
     background-repeat: no-repeat;
     background-size: 358px 100px;
     background-position: right bottom;
