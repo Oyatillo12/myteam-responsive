@@ -1,0 +1,81 @@
+.deliver-section {
+    padding: 140px 0;
+    background-image: url(../../images/deliver-top-bg.png), url(../../images/deliver-btm-img.png);
+    background-repeat: no-repeat;
+    background-size: 147px 100px, 200px 100px;
+    background-position:top left, right bottom;
+}
+
+.deliver {
+    
+}
+.deliver__title-wrapper{
+    max-width: 950px;
+    margin: 0 auto;
+}
+.deliver__title {
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:56px, $CLR:$clr-white);
+    text-align: center;
+
+}
+
+.deliver__title--span {
+    color: rgb(121, 200, 199);
+}
+.deliver__list {
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.deliver__item {
+    max-width: 350px;
+    padding-top: 36px;
+    text-align: center;
+    background-image: url(../images/arrow-img.svg);
+    background-repeat: no-repeat;
+    background-size: 67px 56px;
+    background-position: center top;
+}
+.deliver__top-text {
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:24px, $CLR:$clr-white);
+}
+.deliver__person-name {
+    display: block;
+    @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:2px, $CLR:#79C8C7);
+}
+.deliver__bottom-text {
+    @include textStyle($FS:13px, $FW:500, $LH:18px, $MB:32px, $CLR:$clr-white);
+    font-style: italic;
+}
+// media tablet
+@media only screen and (max-width:900px){
+    .deliver-section {
+        padding: 100px 0;
+    }
+    .deliver__title-wrapper{
+        max-width: 500px;
+    }
+    .deliver__title {
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:48px, $CLR:$clr-white);
+    }
+    .deliver__title--span {
+        color: rgb(121, 200, 199);
+    }
+    .deliver__list {
+        flex-direction: column;
+        @include display($items:center, $space:start, $gap:48px);
+    }
+    .deliver__item {
+        max-width: 573px;
+    }
+    .deliver__top-text {
+        margin-bottom: 16px;
+    }
+    .deliver__bottom-text{
+        margin-bottom: 16px;
+    }
+}
+// media mobile
+@media only screen and (max-width:600px){
+    .deliver-section{
+        padding: 140px 0;
+    }
+}

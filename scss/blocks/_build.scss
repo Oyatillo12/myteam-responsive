@@ -1,0 +1,111 @@
+.scetion__build {
+    padding: 140px 0;
+    background-color: $build-bg;
+    background-image: url(../images/build-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100px 244px;
+    background-position: bottom right;
+}
+
+.build {
+    @include display($items:start, $space:space-between, $gap:0px);
+}
+.build__title-wrapper {
+    max-width: 445px;
+}
+.build__title-line {
+    display: inline-block;
+    margin-bottom: 54px;
+    width: 50px;
+    height: 4px;
+    background-color: $clr-orange;
+}
+.build__title {
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0px, $CLR:white);
+}
+.build__list {
+    padding-top: 58px;
+    flex-direction: column;
+    @include display($items:center, $space:start, $gap:32px);
+}
+.build__item {
+    max-width:  540px;
+    @include display($items:center, $space:start, $gap:23px);
+}
+
+.build__item-img{
+    display: block;
+}
+.build__subtitle {
+    @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:16px, $CLR:$clr-orange);
+}
+.build__subtext {
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:$clr-white);
+}
+
+// media tablet start
+
+@media only screen and (max-width:1300px){
+    .scetion__build {
+        background-position: top right;
+    }
+}
+@media only screen and (max-width:950px){
+    .scetion__build{
+        padding: 100px 0;
+    }
+    .build{
+        display: grid;
+        place-content: center;
+        flex-direction: column;
+        
+    }
+    .build__title-wrapper{
+        // margin: 0 auto;
+        width: 100%; 
+    }
+    .build__title-line{
+        margin-bottom: 32px;
+    }
+    .build__title {
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:0px, $CLR:white);
+    }
+    .build__list{
+        padding-top: 64px;
+        // margin: 0 auto;
+    }
+    .build__item{
+        max-width:573px;
+    }
+}
+// media tablet end
+
+
+// media mobile start
+
+@media only screen and (max-width:600px){
+    .scetion__build{
+        padding: 64px 0;
+    }
+    .build{
+        display: grid;
+        place-content: center;
+        flex-direction: column;
+        
+    }
+    .build__title-wrapper{
+        max-width: 240px; 
+    }
+    .build__list{
+        padding-top: 56px;
+        gap: 48px;
+    }
+    .build__item{
+        flex-direction: column;
+        text-align: center;
+    }
+    .build__subtitle {
+        @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:8px, $CLR:$clr-orange);
+    }
+}
+// media mobile end
