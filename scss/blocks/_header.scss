@@ -1,5 +1,5 @@
 .site-header {
-    padding: 73px 0 129px;
+    padding: 73px 0 0 0;
 }
 
 .header {
@@ -17,6 +17,10 @@
 }
 .nav__link {
     @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:white);
+    transition: all 0.3s linear;
+    &:hover{
+        color: $clr-orange;
+    }
 }
 
 .header__contact-us-link {
@@ -27,10 +31,74 @@
     border: none;
     background-color: transparent;
 }
+
+
+
+// modal
+.header__modal-outer {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    backdrop-filter: blur(5px);
+    z-index: 50;
+    transition: all 0.3s linear;
+}
+
+.modal__inner {
+    position: fixed;
+    padding: 56px 25px 0 48px;
+    z-index: 51;
+    right: 0;
+    width: 65%;
+    height: 100vh;
+    background-color: #2C6269;
+    background-image: url(../images/modal-bgimage.png);
+    background-repeat: no-repeat;
+    background-size: 100px 200px;
+    background-position: right bottom;
+}
+.modal__close-btn{
+    background-color: transparent;
+    border: none;
+    display: block;
+    margin-left: auto;
+}
+
+.show-outer{
+    right:0;
+}
+.show-inner{
+    right: 0;
+}
+.scrol-hidden{
+    overflow-y: hidden;
+}
+
+.modal__list {
+    @include display($items:start, $space:start, $gap:24px);
+    flex-direction: column;
+    margin-bottom: 36px;
+}
+
+.modal__link {
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:white);
+    transition: all 0.3s linear;
+    &:hover{
+        color: $clr-orange;
+    }
+}
+.modal__contact-link {
+    @include btnStyle($W:159px, $PY:10px, $BorderColor:white, $BgColor:transparent, $BtnFS:18px, $BtnFW:600, $BtnLH:28px,$BtnMB:0px, $BtnTextColor:white, $HoverBG:white, $HoverColor:rgba(1, 78, 86, 1));
+}
+// modal
+
+
 // media tablet start
 @media only screen  and (max-width: 800px){
     .site-header {
-        padding: 64px 0 112px;
+        padding: 64px 0 0;
     }
     .header__logo-img{
         width: 127px;
