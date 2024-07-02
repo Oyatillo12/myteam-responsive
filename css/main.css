@@ -46,7 +46,7 @@ body {
 }
 
 .site-header {
-  padding: 73px 0 0 0;
+  padding: 73px 0 125px;
 }
 
 .header {
@@ -239,7 +239,6 @@ body {
   }
 }
 .hero-section {
-  padding-top: 129px;
   background-image: url(../../images/background-img-hero.png);
   background-repeat: no-repeat;
   background-size: 200px 200px;
